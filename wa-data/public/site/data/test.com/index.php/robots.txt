@@ -1,0 +1,6 @@
+User-agent: *
+# wa shop *
+Disallow: /index.php/index.php/my/
+Disallow: /index.php/index.php/checkout/
+# wa shop
+

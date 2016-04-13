@@ -1,0 +1,129 @@
+<div id="callback_form"><!-- Сaмo oкнo --> 
+      <span id="callback_close">X</span> <!-- Кнoпкa зaкрыть --> 
+      
+      <div id="callback_content"></div>
+      
+      <form action="/bc/mail.php" method=post> 
+<div align="center"> 
+<h2>Обратный звонок</h2>
+Не можете дозвониться?<br>
+
+Оставьте свои контакты и мы перезвоним вам сами!<br>
+
+ <label>Телефон</label>    
+ 
+ <input type="text" name="title" size="13" value="+380"><br>
+
+ <label>Им'я</label>  
+ <input type="text" name="mess" size="20"><br>
+
+
+
+  <input type="submit" value="Отправить" name="submit">
+  </div> 
+</form>
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+ <div id="modal_form"><!-- Сaмo oкнo --> 
+      <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+      
+      {$wa->block("site.send_email_form")}
+      
+      <!-- Тут любoе сoдержимoе -->
+</div>
+<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
+<div id="footer">
+        <div class="footer_row">
+            <div class="container">
+                <div class="clear_fix">
+                    <div class="footer_block categories fl_left">
+                        <div class="title">Вы можете подобрать</div>
+                        <div class="fl_left">
+                            <ul>
+                                <li><a href="/category/shini/">Шины</a></li>
+                                <li><a href="category/shinі/diski">Диски</a></li>
+                                <li><a href="/category/shinі/?&tip_shini%5B%5D=153&tip_shini%5B%5D=155&tip_shini%5B%5D=165&tip_shini%5B%5D=167">Грузовые шины</a></li>
+                                <li><a href=#>Мотошины</a></li>
+                                <li><a href=#>Мотодиски</a></li></ul></div>                    </div>
+                    <div class="footer_block cities fl_left">
+                        <div class="title">Вы можете подобрать</div>
+                        <ul>
+                            <li>
+                                <a href=#>Киев</a>
+                            </li>
+                            <li>
+                                <a href=#>Харьков</a>
+                            </li>
+                             <li>
+                                <a href=#>Львов</a>
+                            </li>
+                            <li>
+                                <a href=#>Одесса</a>
+                            </li>
+                          
+                            <li>
+                                <a href=#>Запорожье</a>
+                            </li>
+                            <li>
+                                <a href=#>Днепропетровск</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_block help fl_left">
+                        <div class="title">Помощь</div>
+                        <ul>
+                            {$shop_pages=$wa->shop->pages()}
+                                {if $shop_pages}
+                                    <li>
+                                        {wa_print_tree tree=$shop_pages  attrs = 'id="page-list"' elem ='
+                                    <a href=":url" title=":title">:name</a>' collapsible_class='collapsible' selected=$wa->param('page_id')}
+                                    </li>
+                                {/if}
+                        </ul>
+                    </div>
+                    
+                    <div class="footer_block contacts fl_left">
+                        <div class="title">Связаться с нами</div> 
+                            <ul>
+                                   
+                                <li class="mts">8 (099) 549-20-78</li>   
+                                <li class="kyiv_star">8 (096) 222-23-82</li>
+                                <li class="life">8 (093) 258-20-35</li>  
+                            </ul>
+                                                <div>
+                            <a class="btn btn_black popup_toggle" href="napisat_pismo" >
+                                <span>Написать руководителю</span>
+                            </a>
+
+                            <div class="popup"></div>
+                        </div>
+                        
+                        <div class="email">
+                            <a href="mailto:info@shyna-online.com.ua">{$wa->shop->settings("option_id")}{$wa->shop->settings("option_id")}
+                           info@shyna-online.com.ua</a>
+                        </div>
+                        
+                        <div class="social">
+                            <ul class="clear_fix">
+                                <li class="fb">
+                                    <a target="_blank" href="https://www.facebook.com"></a>
+                                </li>
+                                                                                                                                                                                <li class="vk">
+                                    <a target="_blank" href="https://vk.com"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+             
+                  
+                </div>
+                <div class="bottom clear_fix">
+                                            <div class="fl_left">&#169; 2016 {$wa->accountName()}</div>
+                                        <div class="fl_right"></div>
+                </div>
+            </div>
+        </div>
+    </div>

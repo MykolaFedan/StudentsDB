@@ -1,0 +1,97 @@
+<div id="footer">
+
+
+        <div class="footer_row">
+            <div class="container">
+                <div class="clear_fix">
+                    <div class="footer_block categories fl_left">
+                        <div class="title">Вы можете подобрать</div>
+                        <div class="fl_left">
+                            <ul>
+                                <li><a href="category/shinі/">Шины</a></li>
+                                <li><a href="category/shinі/diski">Диски</a></li>
+                                <li><a href="/category/shinі/?&tip_shini%5B%5D=153&tip_shini%5B%5D=155&tip_shini%5B%5D=165&tip_shini%5B%5D=167">Грузовые шины</a></li>
+                                <li><a href=#>Мотошины</a></li>
+                                <li><a href=#>Мотодиски</a></li></ul></div>                    </div>
+                    <div class="footer_block cities fl_left">
+                        <div class="title">Вы можете подобрать</div>
+                        <ul>
+                            <li>
+                                <a href=#>Киев</a>
+                            </li>
+                            <li>
+                                <a href=#>Харьков</a>
+                            </li>
+                             <li>
+                                <a href=#>Львов</a>
+                            </li>
+                            <li>
+                                <a href=#>Одесса</a>
+                            </li>
+                          
+                            <li>
+                                <a href=#>Запорожье</a>
+                            </li>
+                            <li>
+                                <a href=#>Днепропетровск</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_block help fl_left">
+                        <div class="title">Помощь</div>
+                        <ul>
+                            {$shop_pages=$wa->shop->pages()}
+                                {if $shop_pages}
+                                    <li>
+                                        {wa_print_tree tree=$shop_pages  attrs = 'id="page-list"' elem ='
+                                    <a href=":url" title=":title">:name</a>' collapsible_class='collapsible' selected=$wa->param('page_id')}
+                                    </li>
+                                {/if}
+                        </ul>
+                    </div>
+                    
+                    <div class="footer_block contacts fl_left">
+                        <div class="title">Связаться с нами</div> 
+                            <ul>
+                                   
+                                <li class="mts">8 (099) 549-20-78</li>   
+                                <li class="kyiv_star">8 (096) 222-23-82</li>
+                                <li class="life">8 (093) 258-20-35</li>  
+                            </ul>
+                                                <div>
+                            <a class="btn btn_black popup_toggle" href="javascript: void(0);" data-popup="/site/send-feedback">
+                                <span>Написать руководителю</span>
+                            </a>
+
+                            <div class="popup"></div>
+                        </div>
+                        
+                        <div class="email">
+                            <a href="mailto:info@shyna-online.com.ua">{$wa->shop->settings("option_id")}{$wa->shop->settings("option_id")}
+                           info@shyna-online.com.ua</a>
+                        </div>
+                        
+                        <div class="social">
+                            <ul class="clear_fix">
+                                <li class="fb">
+                                    <a target="_blank" href="https://www.facebook.com"></a>
+                                </li>
+                                                                                                                                                                                <li class="vk">
+                                    <a target="_blank" href="https://vk.com/rezinacc"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+             
+                  
+                </div>
+                <div class="bottom clear_fix">
+                                            <div class="fl_left">&#169;2016 Shyna-online.com.ua</div>
+                                        <div class="fl_right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
