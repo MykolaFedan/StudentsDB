@@ -470,8 +470,8 @@ class shopProduct implements ArrayAccess
      */
     public static function getFolder($product_id)
     {
-        $str = str_pad($product_id, 4, '0', STR_PAD_LEFT);
-        return 'products/'.substr($str, -2).'/'.substr($str, -4, 2);
+       
+        return 'products/';
     }
 
     /**
@@ -484,7 +484,7 @@ class shopProduct implements ArrayAccess
      */
     public static function getPath($product_id, $file = null, $public = false)
     {
-        $path = self::getFolder($product_id)."/$product_id/".($file ? ltrim($file, '/') : '');
+        $path = self::getFolder($product_id)."/images/".($file ? ltrim($file, '/') : '');
         return wa()->getDataPath($path, $public, 'shop');
     }
 

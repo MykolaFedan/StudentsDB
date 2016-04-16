@@ -242,7 +242,7 @@ class shopImage
         } else {
             $n = $image['product_id'];
         }
-        return shopProduct::getPath($image['product_id'], "images/{$n}.{$image['ext']}");
+        return shopProduct::getPath($image['product_id'], "{$n}.{$image['ext']}");
     }
 
     /**
@@ -255,7 +255,7 @@ class shopImage
      */
     public static function getOriginalPath($image)
     {
-        return shopProduct::getPath($image['product_id'], "images/{$image['product_id']}.original.{$image['ext']}");
+        return shopProduct::getPath($image['product_id'], "original.{$image['ext']}");
     }
 
     /**
@@ -268,19 +268,19 @@ class shopImage
      */
     public static function getThumbsPath($image, $size = null)
     {
-        $path = shopProduct::getFolder($image['product_id'])."/{$image['product_id']}/";
+        $path = shopProduct::getFolder($image['product_id'])."/";
         if (is_numeric($image)) {
-            return wa()->getDataPath($path, true, 'shop').'images/'.(int) $image.'/';
+            return wa()->getDataPath($path, true, 'shop').(int) $image.'/';
         } else {
             if (!$size) {
-                return wa()->getDataPath($path, true, 'shop')."images/{$image['product_id']}/";
+                return wa()->getDataPath($path, true, 'shop')."/";
             } else {
                 if (strlen($image['filename'])) {
                     $n = $image['filename'];
                 } else {
                     $n = $image['product_id'];
                 }
-                return wa()->getDataPath($path, true, 'shop')."images/{$image['product_id']}/{$n}.{$size}.{$image['ext']}";
+                return wa()->getDataPath($path, true, 'shop')."images/{$n}.{$size}.{$image['ext']}";
             }
         }
     }
@@ -303,7 +303,7 @@ class shopImage
         } else {
             $n = $image['product_id'];
         }
-        $path = shopProduct::getFolder($image['product_id'])."/{$image['product_id']}/images/{$image['product_id']}/{$n}.{$size}.{$image['ext']}";
+        $path = shopProduct::getFolder($image['product_id'])."/images/{$n}.{$size}.{$image['ext']}";
 
         if (waSystemConfig::systemOption('mod_rewrite')) {
             return wa()->getDataUrl($path, true, 'shop', $absolute);

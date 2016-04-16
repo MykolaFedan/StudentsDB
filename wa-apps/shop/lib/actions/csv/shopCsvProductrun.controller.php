@@ -1491,6 +1491,7 @@ class shopCsvProductrunController extends waLongActionController
                             'height'            => $image->height,
                             'size'              => filesize($file),
                             'original_filename' => $name,
+                            'filename'          => $name,
                             'ext'               => pathinfo($file, PATHINFO_EXTENSION),
                         );
                         if ($exists = $model->getByField($search)) {

@@ -4,13 +4,13 @@ return array (
   array (
     'app_id' => 'site',
     'name' => 'preview_hash',
-    'value' => '570e810cbb149.1460568332',
+    'value' => '570f5f1d886f5.1460625181',
   ),
   1 => 
   array (
     'app_id' => 'site',
     'name' => 'theme_hash',
-    'value' => '56f703a032538.1459028896',
+    'value' => '570f5f2023e54.1460625184',
   ),
   2 => 
   array (

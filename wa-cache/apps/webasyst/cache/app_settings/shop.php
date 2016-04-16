@@ -112,7 +112,7 @@ return array (
   array (
     'app_id' => 'shop',
     'name' => 'theme_hash',
-    'value' => '570e815401c9a.1460568404',
+    'value' => '570f5f82ede8f.1460625282',
   ),
   19 => 
   array (
